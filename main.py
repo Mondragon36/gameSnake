@@ -114,7 +114,7 @@ if __name__ == "__main__" :
     saverJugador.connect()
 
     def cargarJugador():
-        url = "hhtp://game-snake.herokuapp.com/index/"
+        url = "hhtp://game--snake.herokuapp.com/index/"
 
         payload = {}
         headers = {}
@@ -148,7 +148,7 @@ if __name__ == "__main__" :
 
         try:
             registro.agregarJugador(jugador)
-            url = "hhtp://game-snake.herokuapp.com/jugador/"
+            url = "hhtp://game--snake.herokuapp.com/jugador/"
             body = {
                 "Id": id,
                 "Nombre": nombre,
