@@ -148,7 +148,7 @@ if __name__ == "__main__" :
 
         try:
             registro.agregarJugador(jugador)
-            url = "hhtp://game--snake.herokuapp.com/jugador/"
+            url = "hhtp://game--snake.herokuapp.com/jugador_guardar/"
             body = {
                 "Id": id,
                 "Nombre": nombre,
@@ -179,7 +179,7 @@ if __name__ == "__main__" :
 
             try:
                 registro.agregarJugador(jugador)
-                url = "hhtp://game-snake.herokuapp.com/resultado/"
+                url = "hhtp://game--snake.herokuapp.com/resultado/"
                 body = {
                     "Id": id,
                     "Nombre": nombre,
