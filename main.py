@@ -138,29 +138,6 @@ if __name__ == "__main__" :
             registro.agregarJugador(jugador)
         return registro
 
-    def registroJugador():
-        registro = Registro()
-        id = str(input("Ingrese el id => "))
-        nombre = str(input("Ingrese su nombre => "))
-        punto = str(input("Ingrese su score => "))
-        record = str(input("Ingrese su record => "))
-        jugador = Jugador(id, nombre, punto, record)
-
-        try:
-            registro.agregarJugador(jugador)
-            url = "hhtp://game--snake.herokuapp.com/jugador_guardar/"
-            body = {
-                "Id": id,
-                "Nombre": nombre,
-                "Score:": punto,
-                "Record": record,
-            }
-
-            response = requests.request("POST", url, data=body)
-            print(response.status_code)
-            print("\n Se agrego a la db")
-        except Exception as ex:
-            print(ex)
 
 
 
@@ -179,7 +156,7 @@ if __name__ == "__main__" :
 
             try:
                 registro.agregarJugador(jugador)
-                url = "hhtp://game--snake.herokuapp.com/resultado/"
+                url = "/game--snake.herokuapp.com/resultado_guardar/"
                 body = {
                     "Id": id,
                     "Nombre": nombre,
@@ -258,7 +235,7 @@ if __name__ == "__main__" :
 
                 try:
                     registro.agregarJugador(jugador)
-                    url = "hhtp://game-snake.herokuapp.com/resultado/"
+                    url = "hhtp:/game--snake.herokuapp.com/resultado/"
                     body = {
                         "Id": id,
                         "Nombre": nombre,
